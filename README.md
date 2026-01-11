@@ -35,7 +35,7 @@ This project is currently at the **beginning stage of development**.
 - Refactoring of CP2 code into OOP-based classes
 - Features and UI are still being planned and implemented
 
-⚠️ Functionality and structure may change as development continues.
+> ⚠️ Functionality and structure may change as development continues.
 
 ---
 
