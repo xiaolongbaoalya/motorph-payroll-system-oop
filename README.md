@@ -11,7 +11,6 @@ It serves as a reference for how the system was initially designed and implement
 
 - Original CP2 implementation
 - Initial class structures and procedural logic
-- Early versions of payroll and attendance features
 
 ---
 
