@@ -1,6 +1,7 @@
 # 📄 MotorPH Payroll System (OOP)
 
 A GUI-based payroll system for MotorPH that is currently under development.  
+
 This project is an **Object-Oriented Programming (OOP)** continuation of the MotorPH Payroll System originally developed in **Computer Programming 2**, focusing on refactoring and improving the system using OOP principles throughout the term.
 
 This project is currently at the **early stage of development**.
