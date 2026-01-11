@@ -17,6 +17,19 @@ All ongoing work, refactoring, and feature development should be done in this br
 
 ---
 
+## Development Structure
+
+Designated folders are used to organize work for different stages of the project:
+
+- **`milestone-1`** – Development and submissions related to Milestone 1
+- **`milestone-2`** – Development and submissions related to Milestone 2
+- **`ta`** – Initial consolidated version for the **Terminal Assessment (TA)**
+
+The **`ta`** folder contains the initial agreed-upon implementation for the Terminal Assessment.  
+All team members must **review and confirm** the contents of this folder before it is merged into the `main` branch.
+
+---
+
 ## Personal Development Folders
 
 To support parallel development and avoid conflicts, personal development folders are used within the `dev` branch:
