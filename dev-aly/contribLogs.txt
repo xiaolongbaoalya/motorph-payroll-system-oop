@@ -1,1 +1,2 @@
 [Jan 11, 2026] Noon. Created GitHub repository: structure, and readmes for each
+[Jan 12, 2026] Evening. Uploaded CP2 user test case to legacy-cp2 branch
