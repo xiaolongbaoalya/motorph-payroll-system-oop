@@ -1,4 +1,4 @@
 [Jan 11, 2026] Noon. Created GitHub repository: structure, and readmes for each
 [Jan 12, 2026] Evening. Uploaded CP2 user test case to legacy-cp2 branch
 [Jan 15, 2026] Evening. Searched the Use Case Diagram created during Computer Programming 1, sent it to group space. 
-[Jan 18, 2026] 2:36 PM. Added Employee class on method dictionary (not complete). Start drafting GUI Class Diagram.
+[Jan 18, 2026] 3:22 PM. Added Employee class on method dictionary (not complete). Start drafting GUI Class Diagram.
