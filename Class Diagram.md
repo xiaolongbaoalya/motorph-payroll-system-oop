@@ -7,6 +7,8 @@
 | **Functional**  | Attendance, Payroll  |
 | **Utility**     | LoginManager         |
 
+https://docs.google.com/document/d/1LL9vDPQGVk5CAUbeKLkePrD6zbdfCKsh_vt1_gaDwUs/edit?tab=t.0
+
 ---
 
 # Class Details
