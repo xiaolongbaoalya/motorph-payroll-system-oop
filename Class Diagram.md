@@ -3,9 +3,9 @@
 | Category        | Classes                          |
 |-----------------|----------------------------------|
 | **Core**        | Person, Employee, Admin          |
-| **Support**     | ContactInfo, GovernmentID        |
-| **Functional**  | Position, Compensation, Payroll  |
-| **Utility**     | Attendance, LoginManager         |
+| **Support**     | ContactInfo, GovernmentID, Position, Compensation        |
+| **Functional**  | Attendance, Payroll  |
+| **Utility**     | LoginManager         |
 
 ---
 
