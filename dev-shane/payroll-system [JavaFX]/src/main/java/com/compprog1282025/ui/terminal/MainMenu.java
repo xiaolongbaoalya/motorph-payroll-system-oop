@@ -28,7 +28,7 @@ public class MainMenu extends BaseMenu {
         if (effectiveRole == EffectiveRole.HR || effectiveRole == EffectiveRole.ADMIN) {
             System.out.println("2. HR Menu");
         }
-        if (effectiveRole == EffectiveRole.FINANCE) {
+        if (effectiveRole == EffectiveRole.FINANCE || effectiveRole == EffectiveRole.ADMIN) {
             System.out.println("3. Finance Menu");
         }
 
