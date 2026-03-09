@@ -1,0 +1,6 @@
+"username","passwordHash","employeeNumber","role","enabled"
+"garcia","$2a$10$M65K22EBf7l1/FCk1pAYLumLDivkjyH2HBm/I4/Mn8fQbWG190FJ6","10001","ADMIN","true"
+"lim","$2a$10$aw/WEWInfAs4GlXu7MxTMujZbi2ufxzDrLFqsetT1fRpcxTl4CsQ2","10002","HR","true"
+"aquino","$2a$10$G7Kl40FIMIfyV1F9x63ahORUC3jRvU8bTrcY2DqPA.bcih9iI6XTy","10003","IT","true"
+"reyes","$2a$10$L5yBJIK5R9oiS/r8yw1U1e8FfqWrWeDYhxCSGJNbA1ilDA86SYVre","10004","FINANCE","true"
+"hernandez","$2a$10$xdrOu/EE.49NdxdjDPc.t.1GorZIjHbdEibTAAQ4WpB7iHHTSwMgW","10005","OPERATIONS","true"

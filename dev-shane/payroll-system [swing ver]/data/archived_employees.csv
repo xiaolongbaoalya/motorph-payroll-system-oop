@@ -1,0 +1,6 @@
+"Employee #","Last Name","First Name","Birthday","Address","Phone","SSS #","Philhealth #","TIN #","Pag-ibig #","Status","Position","Department","Supervisor","Basic Salary","Rice Subsidy","Phone Allowance","Clothing Allowance"
+"10035","smith","john","01/02/1993","yes","123","123","123","123","123","regular","here","there","None","12345.0","1500.0","500.0","500.0"
+"10040","Yang","Yang","03/20/2026","Sample Address","0922392013","34534","434234","324324","34234","Regular","Sales Manager","Operations","Yasmin Asistido","10000.0","10000.0","10000.0","10000.0"
+"10040","Asistido","Yasmin","03/09/2006","Sample Street address","091245682345","44-4506057-7","820126853950","442-665-657-000","691295330870","Regular","Singer","Operations","Vella  Santos","41850.0","1500.0","500.0","500.0"
+"10035","Asistido","Yasmin","06/10/1994","Sample Address","0929347327","1000","1000","1000","1000","Regular","Sales Representative","HR","None","1000.0","1000.0","1000.0","1000.0"
+"10040","Asistido","Yasmin","03/01/1991","Sample Address","0927465828","145645","145645","145645","145645","Regular","Sales Representative","Operations","Antonio Lim","10000.0","10000.0","10000.0","10000.0"

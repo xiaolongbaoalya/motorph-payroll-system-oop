@@ -1,0 +1,147 @@
+package com.compprog1282025.ui.terminal;
+
+import java.util.Scanner;
+
+import com.compprog1282025.model.employee.Employee;
+import com.compprog1282025.model.user.Permission;
+import com.compprog1282025.model.user.Role;
+import com.compprog1282025.model.user.Session;
+import com.compprog1282025.service.DateTimeUtil;
+import com.compprog1282025.service.EmployeeService;
+import com.compprog1282025.service.FinanceService;
+
+public class FinanceMenu extends BaseMenu {
+    private final FinanceService financeService;
+    private final EmployeeService employeeService;
+
+    public FinanceMenu(FinanceService financeService, EmployeeService employeeService) {
+        this.financeService = financeService;
+        this.employeeService = employeeService;
+    }
+
+    public void displayFinanceMenu(Session session, Scanner scanner) {
+        Role role = session.getUser().getRole();
+
+        boolean canCalculate = role.hasPermission(Permission.CALCULATE_SALARY);
+        boolean canGenerate = role.hasPermission(Permission.GENERATE_PAYSLIP);
+
+        String choice = "default";
+        while (!choice.equalsIgnoreCase("0")) {
+            this.displayHeader("Finance Menu");
+
+            if (canCalculate) {
+                System.out.println("1. Calculate employee salary");
+            }
+            if (canGenerate) {
+                System.out.println("2. Generate employee payslip");
+            }
+
+            System.out.println("0. Exit");
+            System.out.print("Select an option: ");
+            choice = scanner.nextLine().trim();
+
+            switch (choice) {
+                case "0":
+                    break;
+                case "1":
+                    if (canCalculate) {
+                        findEmployeeSalary(scanner, session);
+                    } else {
+                        System.out.println("Invalid input, please try again");
+                    }
+                    break;
+                case "2":
+                    if (canGenerate) {
+                        generateEmployeePayslip(scanner, session);
+                    } else {
+                        System.out.println("Invalid input, please try again");
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid input, please try again");
+            }
+        }
+    }
+
+    public void findEmployeeSalary(Scanner scanner, Session session) {
+        displaySubHeader("Find employee salary");
+
+        System.out.print("Enter employee number to view: ");
+        try {
+            int employeeNumber = Integer.parseInt(scanner.nextLine().trim());
+            Employee employee = employeeService.getEmployee(employeeNumber);
+            if (employee == null) {
+                System.out.println("Employee number not found, please try again.");
+                return;
+            }
+
+            System.out.print("Enter year: ");
+            int year = Integer.parseInt(scanner.nextLine().trim());
+            System.out.print("Enter month number: ");
+            int month = Integer.parseInt(scanner.nextLine().trim());
+
+            if (DateTimeUtil.isValidYear(year) && DateTimeUtil.isValidMonth(month)) {
+                double grossSalary = financeService.calculateMonthSalary(employee, year, month, session);
+                double netSalary = grossSalary > 0 ? financeService.calculateNet(grossSalary) : 0;
+
+                System.out.println(String.format("Expected net salary: %.2f", financeService.calculateNet(employee.getSalary().getBasicSalary())));
+                System.out.println(String.format("Actual net salary for %d-%d: %.2f", month, year, netSalary));
+            } else {
+                System.out.println("Invalid year/month input. Please try again.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error with salary calculation, please try again.");
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void generateEmployeePayslip(Scanner scanner, Session session) {
+        displaySubHeader("Generate payslip");
+        System.out.print("Enter employee number to view: ");
+
+        try {
+            int employeeNumber = Integer.parseInt(scanner.nextLine().trim());
+            Employee employee = employeeService.getEmployee(employeeNumber);
+            if (employee == null) {
+                System.out.println("Employee number not found, please try again.");
+                return;
+            }
+
+            System.out.print("Enter year: ");
+            int year = Integer.parseInt(scanner.nextLine().trim());
+            System.out.print("Enter month number: ");
+            int month = Integer.parseInt(scanner.nextLine().trim());
+
+            if (DateTimeUtil.isValidYear(year) && DateTimeUtil.isValidMonth(month)) {
+                double grossSalary = financeService.calculateMonthSalary(employee, year, month, session);
+
+                if (grossSalary > 0) {
+                    double sss = financeService.calculateSSS(grossSalary);
+                    double philHealth = financeService.calculatePhilhealth(grossSalary);
+                    double pagIbig = financeService.calculatePagibig(grossSalary);
+                    double taxableIncome = grossSalary - (sss + philHealth + pagIbig);
+                    double withholdingTax = financeService.calculateWithholdingTax(taxableIncome);
+                    double netSalary = taxableIncome - withholdingTax;
+
+                    displaySubHeader(String.format("PAYSLIP FOR %s (%d-%d)", employee.getFullName(), month, year));
+                    System.out.println(String.format("Gross Salary: %.2f", grossSalary));
+                    System.out.println("----- Deductions -----");
+                    System.out.println(String.format("SSS: %.2f", sss));
+                    System.out.println(String.format("Philhealth: %.2f", philHealth));
+                    System.out.println(String.format("Pag-ibig: %.2f", pagIbig));
+                    System.out.println("----- Tax -----");
+                    System.out.println(String.format("Withholding tax: %.2f", withholdingTax));
+                    System.out.println("----- Final amount -----");
+                    System.out.println(String.format("Net salary: %.2f", netSalary));
+                } else {
+                    System.out.println("No valid payslip to generate.");
+                }
+            } else {
+                System.out.println("Invalid year/month input. Please try again.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error with salary calculation, please try again.");
+            System.out.println(e.getMessage());
+        }
+    }
+}
