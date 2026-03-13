@@ -151,8 +151,7 @@
                     <HBox spacing="15" alignment="CENTER_LEFT">
                         <Label text="Select Pay Period:" style="-fx-font-weight: bold;"/>
                         <ComboBox fx:id="cmbPayslipMonth" promptText="Month"/><ComboBox fx:id="cmbPayslipYear" promptText="Year"/>
-                        <Button onAction="#refreshPayslipData" styleClass="icon-button"><graphic><Label text="Refresh" style="-fx-font-weight: bold;"/></graphic></Button>
-                        <Region HBox.hgrow="ALWAYS"/><Button text="Download PDF" onAction="#handleDownloadPayslip" styleClass="nav-button"/>
+                        <Region HBox.hgrow="ALWAYS"/>
                     </HBox>
                     <HBox spacing="20">
                         <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" style="-fx-border-color: #10b981;">

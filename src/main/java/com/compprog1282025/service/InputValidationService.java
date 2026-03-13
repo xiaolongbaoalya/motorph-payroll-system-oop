@@ -86,7 +86,7 @@ final class InputValidationService {
         String sanitized = requireNonBlank(fieldName, value);
         rejectInjection(fieldName, sanitized);
         requireMaxLength(fieldName, sanitized, MAX_GOV_ID_LENGTH);
-        if (!sanitized.matches("[0-9-]+")) {
+        if (!sanitized.matches("\\d+(?:-\\d+)*")) {
             throw new IllegalArgumentException("Invalid input: " + fieldName + " format is invalid.");
         }
         return sanitized;
