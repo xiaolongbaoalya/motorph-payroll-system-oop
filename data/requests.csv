@@ -1,0 +1,5 @@
+"ID","EmpNo","Type","Category","Start","End","T-Start","T-End","Reason","Status","DateFiled","approved_by_full_name","approved_by_employee_no"
+"REQ-239","10002","LEAVE","Vacation Leave","2026-03-08","2026-03-10","00:00","23:59","Sample Leave","APPROVED","2026-03-08","Lim, Antonio","10002"
+"REQ-3169","10002","LEAVE","Maternity/Paternity Leave","2026-03-08","2026-03-13","00:00","23:59","Paternity Leavee","REJECTED","2026-03-08","Lim, Antonio","10002"
+"REQ-4404","10001","LEAVE","Sick Leave","2026-03-09","2026-03-13","00:00","23:59","Sample Reason","APPROVED","2026-03-09","Garcia, Manuel III","10001"
+"REQ-a5ceaf43-39cd-46cf-b0a6-48cb424db478","10001","LEAVE","Vacation Leave","2026-03-09","2026-03-13","00:00","23:59","Sample Leave Only","APPROVED","2026-03-09","Garcia, Manuel III","10001"
