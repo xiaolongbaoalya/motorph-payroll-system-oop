@@ -1,14 +1,14 @@
 # 📄 MotorPH Payroll System (OOP)
 
-A GUI-based payroll system for MotorPH that is currently under development.  
+A GUI-based payroll system for MotorPH developed as an **Object-Oriented Programming (OOP)** continuation of the MotorPH Payroll System originally created in **Computer Programming 2**.
 
-This project is an **Object-Oriented Programming (OOP)** continuation of the MotorPH Payroll System originally developed in **Computer Programming 2**, focusing on refactoring and improving the system using OOP principles throughout the term.
+This version reflects the team’s **Milestone 2 (MS2)** submission and represents the system’s current implemented state at this stage of development.
 
-> This project is currently at the **early stage of development**.
+> ⚠️ This project may still be subject to change depending on mentor feedback and further revisions.
 
 ---
 
-## 👨‍💻 **Developed By**
+## 👨‍💻 Developed By
 
 The MotorPH Payroll System Team:
 - Joemel Bataga
@@ -18,37 +18,46 @@ The MotorPH Payroll System Team:
 
 ---
 
-## 🎯 **Project Objectives**
+## 🎯 Project Objectives
 
 The objectives of this project are to:
-- Refactor the existing payroll system into a proper OOP design
-- Apply encapsulation, abstraction, and modular class structure
+- Refactor the existing payroll system into a more structured OOP design
+- Apply core OOP principles such as encapsulation, abstraction, inheritance, and polymorphism
 - Improve code organization, readability, and maintainability
-- Gradually enhance system features as the course progresses
+- Enhance the original payroll system with a more modular and scalable architecture
 
 ---
 
-## 🚧 **Project Status**
+## 🚧 Project Status
 
-This project is currently at the **beginning stage of development**.
+This repository contains the team’s **MS2 version** of the MotorPH Payroll System (OOP).
 
-- Initial project structure setup
-- Refactoring of CP2 code into OOP-based classes
-- Features and UI are still being planned and implemented
+Current progress includes:
+- Refactoring of the original CP2 payroll system into OOP-based classes
+- Development of the system’s GUI-based structure
+- Implementation of core payroll and employee management functionalities for Milestone 2
 
-> ⚠️ Functionality and structure may change as development continues.
+> Note: Additional revisions may still be made after mentor consultation and feedback.
 
 ---
 
-## 📚 **Course Context**
+## 🔐 Access Note for Mentor
 
-This project is developed as part of an **Object-Oriented Programming** course and builds upon the MotorPH Payroll System from **Computer Programming 2**.
+As part of following better security and coding practices, employee login credentials were not hardcoded into the application.
+
+The corresponding test credentials were instead provided separately to the mentor for access, review, and evaluation.
+
+---
+
+## 📚 Course Context
+
+This project was developed as part of an **Object-Oriented Programming** course and builds upon the original MotorPH Payroll System from **Computer Programming 2**.
 
 Original CP2 repository (for reference):  
-https://github.com/xiaolongbaoalya/motorph-payroll-system
+[MotorPH Payroll System - CP2](https://github.com/xiaolongbaoalya/motorph-payroll-system)
 
 ---
 
-## 🙏 **Acknowledgements**
+## 🙏 Acknowledgements
 
-This project is developed as part of a course conducted by **Glenn Baluyot**.
+This project was developed as part of a course conducted by **Glenn Baluyot**, with the help of **IT Coach Edmund Nietes**.
